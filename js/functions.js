@@ -46,7 +46,7 @@ var app = {
             textContainer.find('tr:even').not('thead tr').addClass('even');
         },
         forms: function(){
-
+            $('input[placeholder], textarea[placeholder]').placeholder();
         }
     },
     afterLoad: function(){
