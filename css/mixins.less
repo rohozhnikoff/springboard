@@ -26,19 +26,6 @@
     .size(@long, @long);
 }
 
-// для мультиколонок
-.columns(@gutter: @gutterWidth){
-    overflow:hidden;
-    .clearfix();
-    margin-left: @gutter * -1;
-
-    .column(@width:auto){
-        float:left;
-        width:@width;
-        margin-left:@gutter;
-    }
-}
-
 // очистка потока
 .clearfix {
   *zoom: 1;
