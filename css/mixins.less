@@ -56,9 +56,8 @@
     }
 }
 
-.pseudo(@color: @linkColor, @colorHover: @linkColorHover, @type: dashed){
-    @colorActive: darken(@color, 15);
-
+// для псевдоссылок
+.pseudo(@color: @linkColor, @colorHover: @linkColorHover, @colorActive: @linkColorActive, @type: dashed){
     .href(@color, @colorHover, @colorActive, @color);
     text-decoration: none;
     cursor: pointer;
@@ -70,6 +69,29 @@
     }
     &:active{
         border-color: @colorActive;
+    }
+}
+
+// часто бывает, что ссылка больше чем текст
+.pseudo-span(@color: @linkColor, @colorHover: @linkColorHover, @colorActive: @linkColorActive, @type: dashed){
+    text-decoration: none;
+    cursor: pointer;
+    .href(@color, @colorHover, @colorActive, @color);
+
+    span{
+        border-bottom: 1px @type @color;
+    }
+
+    &:hover{
+        span{
+            text-decoration: none;
+            border-color: @colorHover;
+        }
+    }
+    &:active{
+        span{
+            border-color: @colorActive;
+        }
     }
 }
 
