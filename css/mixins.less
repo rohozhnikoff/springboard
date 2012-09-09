@@ -147,7 +147,13 @@
     -moz-box-shadow: @shadow;
     box-shadow: @shadow;
 }
-
+// внутреняя тень
+.box-shadow-inset(@x: 0, @y: 0, @blur: 1px, @c: #ffffff) {
+    @shadow: inset @x @y @blur hsla(hue(@c), saturation(@c), lightness(@c), 1);
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
 
 // скругленные уголки
 .border-radius(@radius: 5px) {
