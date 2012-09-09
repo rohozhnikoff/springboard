@@ -1,0 +1,22 @@
+input,
+textarea,
+select,
+option{
+    color: @form-c;
+    border-color: @form-bdc;
+    background: @form-bgc;
+}
+
+input[placeholder]{
+    .placeholder(@placeholderColor);
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+button {
+    width: auto;
+    overflow: visible;
+}

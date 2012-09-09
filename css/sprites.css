@@ -1,0 +1,12 @@
+/* line 114, icons/*.png */
+.icons-sprite {
+  background: url('../sprites/icons-s2d8ab6f2a2.png') no-repeat;
+}
+
+/* line 9, _sprites-config.sass */
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
