@@ -3,8 +3,6 @@ $icons-sprite-dimensions: true // включаем параметры height и 
 $icons-layout: smart // включаем умный лейаут
 @import "icons/*.png"
 
-//+all-icons-sprites
-
 
 .inline-block
   display: -moz-inline-stack // ff2
@@ -15,3 +13,8 @@ $icons-layout: smart // включаем умный лейаут
 =ib-icons($name)
   +icons-sprite($name)
   @extend .inline-block
+
+=only-icons($name)
+  $icons-sprite-dimensions: false
+  +icons-sprite($name)
+  $icons-sprite-dimensions: true
